@@ -50,10 +50,12 @@ a {text-align: start;
 .nav-container {
   position: fixed;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
+  gap: 15px;
+  padding: 5px;
   background-color: rgb(255, 255, 255);
-  border-bottom:  2px solid rgb(113, 112, 113);
-  margin-top: -30px;
+  border-bottom:  2px solid rgb(109, 78, 87);
+  margin: -30px auto auto auto;
   overflow: visible;
   border-radius: 5px;
   z-index: 1; 
@@ -62,10 +64,10 @@ a {text-align: start;
 .nav-container ul li {
   display: inherit;
   position: relative;
-  margin: 7px 10px;
   padding: 10px 25px;
   background: linear-gradient(rgb(108, 204, 204), rgb(56, 50, 66));
   border-radius: 5px;
+ 
   text-align: center;
   font-size: 18px;
   
@@ -97,7 +99,7 @@ a {text-align: start;
 .nav-container ul li:hover ul {
   display: grid;
   gap: 5px;
-  align-items: flex-start;
+  
   
 }
 
@@ -108,7 +110,8 @@ a {text-align: start;
 
 .nav-container ul li ul li a:hover {
   font-weight: bold;
-  background-color: rgb(131, 247, 232);  
+  background-color: rgb(131, 247, 232); 
+  
 }
 
 /* 3.Header-section*/
@@ -269,26 +272,4 @@ a {text-align: start;
     transform: translateY(0px);
     
   }
-}
-
-@media screen and (max-width: 500px) {
-  body {padding: 0px;
-        background-color: black;
-  }
-
-  .nav-container ul li {
-    display: inherit;
-    position: relative;
-    margin: 7px 10px;
-    padding: 5px 10px;
-  }
-
-  .header {
-    display: flex;
-    flex-wrap: wrap;
-    height: 50vh;
-    background-size: contain;
-    
-  }
-
 }
