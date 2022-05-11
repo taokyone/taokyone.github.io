@@ -1,0 +1,264 @@
+
+/*****************************
+
+1. Simple start clean.
+2. Navigation bar.
+3. Header section/Text box/Button.
+4. Content section.
+5. Footer.
+6. Keyframes
+
+******************************/
+
+
+
+
+/* 1. Simple reset to start clean.* = the universal selector. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* so borders/padding is not added to the total width*/
+}
+
+body {
+  font-family: 'Leto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777; 
+  padding: 30px;
+}
+
+/* 2. Navigation Bar*/
+
+a {text-align: start;
+  text-transform: uppercase;
+  text-decoration: none; 
+  color: white;
+  list-style: none;
+  font-family: 'Nunito Sans', sans-serif; 
+}
+
+.nav-container {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(255, 255, 255);
+  border-bottom:  2px solid rgb(113, 112, 113);
+  margin-top: -30px;
+  overflow: visible;
+  border-radius: 5px;
+  z-index: 1; 
+}
+
+.nav-container ul li {
+  display: inherit;
+  position: relative;
+  margin: 7px 10px;
+  padding: 10px 15px;
+  background: linear-gradient(rgb(108, 201, 204), rgb(65, 54, 82));
+  border-radius: 5px;
+  text-align: center;
+  
+}
+
+.nav-container ul li:hover {
+  position: relative;
+  z-index: 1;
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+  border: 1px solid black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+}
+
+
+.nav-container ul li a:hover {
+  color: rgb(21, 23, 23);
+  border-radius: 5px;
+}
+
+
+.nav-container ul li ul {
+  margin-top: 4px;
+  position: absolute;
+  display: none;
+}
+
+.nav-container ul li:hover ul {
+  display: grid;
+  gap: 5px;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+.nav-container ul li ul li a {
+  margin: 5px;
+  padding: 7px;
+}
+
+.nav-container ul li ul li a:hover {
+  font-weight: bold;
+  background-color: rgb(81, 235, 255);  
+}
+
+/* 3.Header-section*/
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  height: 95vh; /* vh = procent of viewport height */
+  background-image:
+   url(../images/computer.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 0 100%, 98% 85%, 100% 0);
+  position: relative;
+}
+
+.text-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%); /* sets the origin to the center of the box 
+  and not the parent element */
+}
+
+.heading-primary {
+  margin-bottom: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* prevents the "shake" in the animation
+ */
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out; /*animation accelleration*/
+  font-family: 'Orbitron', sans-serif;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 15px;
+  animation-name: moveInRight;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+}
+
+/* 4.Content section */
+.content {
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+/* 5.Footer */
+
+.footer ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  padding: 30px;
+  background-color: rgb(7, 7, 7);
+}
+
+.footer ul li {
+  text-decoration: none;
+  list-style: none;
+  margin: auto;
+}
+
+.footer ul li img {
+  width: 50px;
+  height: 50px;
+  
+}
+
+.footer ul li img:hover {
+  transform: rotate(25deg);
+  transition-duration: 1s;
+  
+}
+
+
+/* 6.Keyframe Animations. */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    transform: scaleX(-1);
+    
+  }
+
+  80% {
+    transform: translateX(10px);
+    
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    
+    transform: translateX(100px);
+    transform: rotate(180deg);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    
+  }
+
+}
+
+@keyframes moveUpBtn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    
+  }
+
+}
+
+@keyframes menuAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    
+  }
+}
+
