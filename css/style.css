@@ -63,10 +63,11 @@ a {text-align: start;
   display: inherit;
   position: relative;
   margin: 7px 10px;
-  padding: 10px 15px;
-  background: linear-gradient(rgb(204, 108, 145), rgb(65, 54, 82));
+  padding: 10px 25px;
+  background: linear-gradient(rgb(108, 204, 204), rgb(56, 50, 66));
   border-radius: 5px;
   text-align: center;
+  font-size: 18px;
   
 }
 
@@ -77,6 +78,7 @@ a {text-align: start;
   transition-duration: 0.5s;
   border: 1px solid black;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+  
 }
 
 
@@ -106,7 +108,7 @@ a {text-align: start;
 
 .nav-container ul li ul li a:hover {
   font-weight: bold;
-  background-color: rgb(247, 131, 131);  
+  background-color: rgb(131, 247, 232);  
 }
 
 /* 3.Header-section*/
