@@ -89,7 +89,7 @@ a {text-align: start;
   display: grid;
   gap: 5px;
   align-items: flex-start;
-  font-size: 14px;
+  
 }
 
 .nav-container ul li ul li a {
