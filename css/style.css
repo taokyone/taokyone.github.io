@@ -9,6 +9,9 @@
 6. Keyframes
 
 ******************************/
+/* Media Queries */
+
+
 
 
 
@@ -20,6 +23,10 @@
   padding: 0;
   box-sizing: border-box; /* so borders/padding is not added to the total width*/
 }
+
+/* On screens that are 600px wide or less, the background color is blue */
+
+
 
 body {
   font-family: 'Leto', sans-serif;
@@ -262,3 +269,24 @@ a {text-align: start;
   }
 }
 
+@media screen and (max-width: 500px) {
+  body {padding: 0px;
+  
+  }
+
+  .nav-container ul li {
+    display: inherit;
+  position: relative;
+  margin: 7px 10px;
+  padding: 10px 15px;
+  }
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    background-size: contain;
+    
+  }
+
+}
